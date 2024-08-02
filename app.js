@@ -53,4 +53,5 @@ function againGame() {
   myInput.value = "";
   checkBtn.disabled = false;
   playToGame();
+  message.textContent = "Yeni oyun başlıyor...";
 }
