@@ -5,6 +5,7 @@ const checkBtn = document.querySelector(".check");
 const message = document.querySelector(".msg");
 const myScore = document.querySelector(".my-score");
 const topScore = document.querySelector(".top-score");
+const bodyScreen = document.querySelector("body");
 
 let score = 0;
 let tryCount = 10;
