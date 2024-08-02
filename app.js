@@ -21,8 +21,14 @@ function playToGame() {
   if (myNumber == "") {
     message.textContent = "Lütfen boş bırakmayınız!";
   } else if (myNumber != randomNum) {
-    message.textContent = "Bilemediniz";
-    tryCount--;
+    if (myNumber < randomNum) {
+      message.textContent = "Arttırın";
+      tryCount--;
+    } else if (myNumber > randomNum) {
+      message.textContent = "Azaltın";
+      tryCount--;
+    }
+
     myScore.textContent = tryCount;
     if (tryCount == 0) {
       message.textContent =
