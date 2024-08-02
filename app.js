@@ -21,7 +21,11 @@ function playToGame() {
     message.textContent = "Lütfen boş bırakmayınız!";
   } else if (myNumber != randomNum) {
     message.textContent = "Bilemediniz";
+    tryCount--;
+    myScore.textContent = tryCount;
   } else {
     message.textContent = "Tebrikler tahmininiz doğru!";
+    bodyScreen.style.backgroundColor = "green";
+    checkBtn.disabled = true;
   }
 }
