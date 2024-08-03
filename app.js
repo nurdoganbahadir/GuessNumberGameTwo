@@ -41,8 +41,6 @@ function playToGame() {
     bodyScreen.style.backgroundColor = "green";
     checkBtn.disabled = true;
     number.textContent = randomNum;
-    // score = tryCount;
-    // topScore.textContent = score;
     topScoreScreen();
   }
 }
