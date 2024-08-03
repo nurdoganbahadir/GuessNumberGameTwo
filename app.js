@@ -7,8 +7,8 @@ const myScore = document.querySelector(".my-score");
 const topScore = document.querySelector(".top-score");
 const bodyScreen = document.querySelector("body");
 
-let score = 0;
 let tryCount = 10;
+let score = 0;
 
 checkBtn.addEventListener("click", playToGame);
 againBtn.addEventListener("click", againGame);
@@ -41,7 +41,16 @@ function playToGame() {
     bodyScreen.style.backgroundColor = "green";
     checkBtn.disabled = true;
     number.textContent = randomNum;
+    // score = tryCount;
+    // topScore.textContent = score;
+    topScoreScreen();
   }
+}
+let scoreList = [];
+function topScoreScreen() {
+  scoreList.push(tryCount);
+  console.log(scoreList);
+  topScore.textContent = Math.max(...scoreList);
 }
 
 function againGame() {
